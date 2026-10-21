@@ -1,0 +1,49 @@
+Script started on 2026-10-14 19:22:15+07:00 [TERM="screen" TTY="/dev/pts/57" COLUMNS="84" LINES="27"]
+[?2004heltex-pg1-v20@eltex-2026-autumn:~$ echo "$STY"
+[?2004l1308582.whoami_part2
+[?2004heltex-pg1-v20@eltex-2026-autumn:~$ ды[K[Kls 
+.bash_history           eltex-pg1-v20_part.log  report_part1.txtvi
+.bash_logout            .lesshst                .ssh/
+.bashrc                 .profile                .viminfo
+.config/                report-part1.txt        .Xauthority
+eltex-pg1-v20@eltex-2026-autumn:~$ ls 
+.bash_history           eltex-pg1-v20_part.log  report_part1.txtvi
+.bash_logout            .lesshst                .ssh/
+.bashrc                 .profile                .viminfo
+.config/                report-part1.txt        .Xauthority
+eltex-pg1-v20@eltex-2026-autumn:~$ ls 
+.bash_history           eltex-pg1-v20_part.log  report_part1.txtvi
+.bash_logout            .lesshst                .ssh/
+.bashrc                 .profile                .viminfo
+.config/                report-part1.txt        .Xauthority
+eltex-pg1-v20@eltex-2026-autumn:~$ ls [K
+ls           lsb_release  lsinitramfs  lslocks      lsmod        lspci
+lsattr       lscpu        lsipc        lslogins     lsns         lsusb
+lsblk        lsfd         lsirq        lsmem        lsof         
+eltex-pg1-v20@eltex-2026-autumn:~$ ls^C[?2004l[?2004h[?2004l
+[?2004heltex-pg1-v20@eltex-2026-autumn:~$ echo $HIST
+[?2004l
+[?2004heltex-pg1-v20@eltex-2026-autumn:~$ [Keltex-pg1-v20@eltex-2026-autumn:~$ eltex-pg1-v20@eltex-2026-autumn:~$ 
+[?2004lbash: eltex-pg1-v20@eltex-2026-autumn:~$: command not found
+[?2004heltex-pg1-v20@eltex-2026-autumn:~$ [Keltex-pg1-v20@eltex-2026-autumn:~$ echo $HIST
+$HISTCMD       $HISTCONTROL   $HISTFILE      $HISTFILESIZE  $HISTSIZE
+eltex-pg1-v20@eltex-2026-autumn:~$ echo $HISTFILESIZE
+[?2004l2000
+[?2004heltex-pg1-v20@eltex-2026-autumn:~$ echo $HISTFILESIZE[K[K[K[K[K[K[K[KSIZE
+[?2004l1000
+[?2004heltex-pg1-v20@eltex-2026-autumn:~$ [Keltex-pg1-v20@eltex-2026-autumn:~$ [Keltex-pg1-v20@eltex-2026-autumn:~$ [Keltex-pg1-v20@eltex-2026-autumn:~$ ды [K[K[Kls -d ~/.*
+[?2004l/home/eltex-pg1-v20/.bash_history  /home/eltex-pg1-v20/.bashrc  /home/eltex-pg1-v20/.lesshst  [0m[01;34m/home/eltex-pg1-v20/.ssh[0m      /home/eltex-pg1-v20/.Xauthority
+/home/eltex-pg1-v20/.bash_logout   [01;34m/home/eltex-pg1-v20/.config[0m  /home/eltex-pg1-v20/.profile  /home/eltex-pg1-v20/.viminfo
+[?2004heltex-pg1-v20@eltex-2026-autumn:~$ [Keltex-pg1-v20@eltex-2026-autumn:~$ [Keltex-pg1-v20@eltex-2026-autumn:~$ [Keltex-pg1-v20@eltex-2026-autumn:~$ [Keltex-pg1-v20@eltex-2026-autumn:~$ [Keltex-pg1-v20@eltex-2026-autumn:~$ export HISTTIMEFORMAT='%d.%m.%Y %H:%M:%S '
+[?2004l[?2004heltex-pg1-v20@eltex-2026-autumn:~$ [Keltex-pg1-v20@eltex-2026-autumn:~$ history 10
+[?2004l   74  14.10.2026 19:22:15 screen -ls
+   75  14.10.2026 19:22:15 screen -S 'whoami_part2'
+   76  14.10.2026 19:23:50 echo "$STY"
+   77  14.10.2026 19:30:47 echo $HIST
+   78  14.10.2026 19:30:57 eltex-pg1-v20@eltex-2026-autumn:~$ 
+   79  14.10.2026 19:32:09 echo $HISTFILESIZE
+   80  14.10.2026 19:32:27 echo $HISTSIZE
+   81  14.10.2026 19:37:27 ls -d ~/.*
+   82  14.10.2026 19:39:36 export HISTTIMEFORMAT='%d.%m.%Y %H:%M:%S '
+   83  14.10.2026 19:39:57 history 10
+[?2004heltex-pg1-v20@eltex-2026-autumn:~$ [Keltex-pg1-v20@eltex-2026-autumn:~$ [Keltex-pg1-v20@eltex-2026-autumn:~$ 

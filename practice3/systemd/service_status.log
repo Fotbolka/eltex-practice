@@ -1,0 +1,16 @@
+● cuckoo.service - Cuckoo FIFO Service
+     Loaded: loaded (/etc/systemd/system/cuckoo.service; enabled; preset: enabled)
+     Active: active (running) since Wed 2026-10-21 07:48:23 UTC; 30s ago
+   Main PID: 10200 (bash)
+      Tasks: 1 (limit: 4600)
+     Memory: 340.0K (peak: 844.0K)
+        CPU: 1ms
+     CGroup: /system.slice/cuckoo.service
+             └─10200 /bin/bash /home/user1/practice3/systemd/cuckoo.sh
+
+Oct 21 07:48:23 eltex-practice2-pg1-v20 systemd[1]: Started cuckoo.service - Cuckoo FIFO Service.
+Oct 21 07:31:22 eltex-practice2-pg1-v20 systemd[1]: Started cuckoo.service - Cuckoo FIFO Service.
+Oct 21 07:48:23 eltex-practice2-pg1-v20 systemd[1]: Stopping cuckoo.service - Cuckoo FIFO Service...
+Oct 21 07:48:23 eltex-practice2-pg1-v20 systemd[1]: cuckoo.service: Deactivated successfully.
+Oct 21 07:48:23 eltex-practice2-pg1-v20 systemd[1]: Stopped cuckoo.service - Cuckoo FIFO Service.
+Oct 21 07:48:23 eltex-practice2-pg1-v20 systemd[1]: Started cuckoo.service - Cuckoo FIFO Service.

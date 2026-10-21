@@ -1,0 +1,140 @@
+    1  exit
+    2  ls -la /root/.ssh/
+    3  cat /root/.ssh/authorized_keys
+    4  exit
+    5  useradd -m -s /bin/bash user1
+    6  passwd user1
+    7  getend passwd user1
+    8  getent passwd user1
+    9  ls -ld /home/user1
+   10  adduser user2
+   11  adduser user3
+   12  getent passwd user1 user2 user3
+   13  usermod -s /usr/sbin/nologin user3
+   14  getent passwd user3
+   15  su user3
+   16  su -s /bin/bash user3
+   17  groupadd students
+   18  usermod -aG students user1
+   19  usermod -aG students user2
+   20  usermod -aG students user3
+   21  groups user1
+   22  groups user2
+   23  groups user3
+   24  getent group students
+   25  mkdir -p /opt/share
+   26  chgrp students /opt/share
+   27  chmod 2770 /opt/share
+   28  ls -ld /opt/share
+   29  echo 'umask 004' >> /home/user1/.profile
+   30  su - user1
+   31  su - user2
+   32  su -s /bin/bash user3
+   33  ls -l /opt/share
+   34  su - user1
+   35  ls -l /opt/share
+   36  chmod +t /opt/share
+   37  ls -ld /opt/share
+   38  su - user2
+   39  su - user1
+   40  ls -l /opt/share
+   41  command -v dmesg
+   42  visudo -f /etc/sudoers.d/user1-dmesg
+   43  sudo -l -U user1
+   44  su - user1
+   45  sudo -l -U user1
+   46  nano /usr/local/bin/user2-dmesg.sh
+   47  chown root:root /usr/local/bin/user2-dmesg.sh
+   48  chmod 4755 /usr/local/bin/user2-dmesg.sh
+   49  ls -l /usr/local/bin/user2-dmesg.sh
+   50  su - user
+   51  su - user2
+   52  chage -M 10 user1
+   53  chage -M 10 user2
+   54  chage -M 10 user3
+   55  chage -l user1
+   56  chage -l user2
+   57  chage -l user3
+   58  nano /etc/motd
+   59  cat /etc/motd
+   60  command -v rsync
+   61  rsync -av /etc/ /root/etc_backup/
+   62  ls -ld /root/etc_backup
+   63  ls /root/etc_backup | head
+   64  tar -czf /root/etc_backup.tar.gz -C /root etc_backup
+   65  tar -cjf /root/etc_backup.tar.bz2 -C /root etc_backup
+   66  apt update
+   67  apt install bzip2 -y
+   68  tar -cjf /root/etc_backup.tar.bz2 -C /root etc_backup
+   69  ls -lh /root/etc_backup.tar.gz /root/etc_backup.tar.bz2
+   70  command -v 7z
+   71  apt install 7zip -y
+   72  command -v 7z
+   73  cd /root
+   74  7z a etc_backup.7z etc_backup/
+   75  ls -lh /root/etc_backup.tar.gz /root/etc_backup.tar.bz2 /root/etc_backup.7z
+   76  ls -l /root/etc_backup/os-release /root/etc_backup/resolv.conf /root/etc_backup/mtab
+   77  rm /root/etc_backup.7z
+   78  7z a -snl /root/etc_backup.7z /root/etc_backup/
+   79  7z t /root/etc_backup.7z
+   80  ls -lh /root/etc_backup.tar.gz /root/etc_backup.tar.bz2 /root/etc_backup.7z
+   81  echo 'Practice 2: backup synchronization test' >> /etc/motd
+   82  tail -n 5 /etc/motd
+   83  diff /etc/motd /root/etc_backup/motd
+   84  rsync -av /etc/ /root/etc_backup/
+   85  diff /etc/motd /root/etc_backup/motd
+   86  tar -tzf /root/etc_backup.tar.gz | grep 'etc_backup/motd'
+   87  tar -xOzf /root/etc_backup.tar.gz etc_backup/motd | diff /etc/motd -
+   88  mkdir -p /root/restore_test
+   89  tar -xzf /root/etc_backup.tar.gz -C /root/restore_test
+   90  ls -l /root/restore_test/etc_backup/motd
+   91  diff /root/restore_test/etc_backup/motd /etc/motd
+   92  cat /root/restore_test/etc_backup/motd
+   93  history -a
+   94  history | tail -n 30
+   95  history > /root/practice2_eltex-pg1-v20_part1.log
+===== PRACTICE 2: PART 1 =====
+===== USERS =====
+user1:x:1001:1001::/home/user1:/bin/bash
+user2:x:1002:1002:,,,:/home/user2:/bin/bash
+user3:x:1003:1003:,,,:/home/user3:/usr/sbin/nologin
+===== GROUPS =====
+students:x:1004:user1,user2,user3
+===== SHARED DIRECTORY =====
+drwxrws--T 2 root students 4096 Oct 20 15:19 /opt/share
+===== PASSWORD AGING =====
+Last password change					: Oct 20, 2026
+Password expires					: Oct 30, 2026
+Password inactive					: never
+Account expires						: never
+Minimum number of days between password change		: 0
+Maximum number of days between password change		: 10
+Number of days of warning before password expires	: 7
+Last password change					: Oct 20, 2026
+Password expires					: Oct 30, 2026
+Password inactive					: never
+Account expires						: never
+Minimum number of days between password change		: 0
+Maximum number of days between password change		: 10
+Number of days of warning before password expires	: 7
+Last password change					: Oct 20, 2026
+Password expires					: Oct 30, 2026
+Password inactive					: never
+Account expires						: never
+Minimum number of days between password change		: 0
+Maximum number of days between password change		: 10
+Number of days of warning before password expires	: 7
+===== SUDO PERMISSIONS =====
+Matching Defaults entries for user1 on eltex-practice2-pg1-v20:
+    env_reset, mail_badpass,
+    secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin,
+    use_pty
+
+User user1 may run the following commands on eltex-practice2-pg1-v20:
+    (root) /usr/bin/dmesg
+===== ARCHIVES =====
+-rw-r--r-- 1 root root 440K Oct 20 15:49 /root/etc_backup.7z
+-rw-r--r-- 1 root root 528K Oct 20 15:44 /root/etc_backup.tar.bz2
+-rw-r--r-- 1 root root 564K Oct 20 15:41 /root/etc_backup.tar.gz
+===== RESTORED FILE =====
+Ilya Kalinin
